@@ -10,13 +10,13 @@ This app is for members of the running club to sign up for events, keep track of
 
 Mia is moved to London from the West Country. She is looking to join a local social running club to keep fit and make friends. She is 24, works in sales, studied drama at University and is gregarious and outgoing. She is adept at social media and has moderate tech ability.
 
--Goals
+- Goals
 	- Find out about training and socials
 	- Sign up for club
 	- Buy kit
 	- Join club in social media
 
--Tasks
+- Tasks
 	- Browse training schedule
 	- Browse kit
 	- Choose kit size and colour
@@ -35,7 +35,10 @@ Carl was born in Norwich and now works for a bank in the city. He is extremely c
 	- Plan training
 
 - Tasks
-	
+	- Browse races
+	- Browse training sessions
+	- Add races to cart
+	- Pay for races	
 
 ### What does it do?
 
