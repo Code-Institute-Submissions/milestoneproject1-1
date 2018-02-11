@@ -4,7 +4,7 @@
 
 ### What is the app for?
 
-This app is for members of the running club to sign up for events, keep track of their progress and plan their training. New members can find information on training and sign up to the club.
+This app is for members of the running club to find information on training and sign up for sessions and races.
 
 #### Persona 1 Mia
 
@@ -18,10 +18,7 @@ Mia is moved to London from the West Country. She is looking to join a local soc
 
 - Tasks
 	- Browse training schedule
-	- Browse kit
-	- Choose kit size and colour
-	- Add to basket
-	- Buy kit
+	- Sign up for races
 	- Sign up for club
 
 #### Persona 2 Carl
@@ -42,18 +39,27 @@ Carl was born in Norwich and now works for a bank in the city. He is extremely c
 
 ### What does it do?
 
+The site allows users to learn about the club and the training sessions, sign up for training sessions and upcoming races and tells them how much it will cost.  
+
 ### How does it work?
 
 ## Features
+
+
 
 ### Existing Features
 - None... yet
 
 ### Features Left to Implement
 
-- Table of races and button to sign up.
-- Training schedule marking down social runs and training runs.
-- Global running total basket amount so every time you sign up for a race it adds it the basket and takes the total fee by direct debit.
+- Home landing page with about us, social media links and video.
+- Join us button that takes you to the training page.
+- Tabs for each training day of the week with info, picture and cost.
+- Button to sign up for training session that adds it to the schedule table.
+- Table of races with links to sign up.
+- Schedule of choosen weekly training sessions. 
+- Cancel training session.
+- Total weekly cost of training sessions.
 
 ## Tech Used
 
