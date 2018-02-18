@@ -13,8 +13,8 @@ Mia is moved to London from the West Country. She is looking to join a local soc
 - Goals
 	- Find out about training and socials
 	- Sign up for club
-	- Buy kit
 	- Join club in social media
+	- Contact club with form query
 
 - Tasks
 	- Browse training schedule
@@ -52,14 +52,28 @@ The site allows users to learn about the club and the training sessions, sign up
 
 ### Features Left to Implement
 
-- Home landing page with about us, social media links and video.
+- Home landing page with about us and video.
+- Video styling that turns background black when they click play and then enlargens Join button.
 - Join us button that takes you to the training page.
-- Tabs for each training day of the week with info, picture and cost.
-- Button to sign up for training session that adds it to the schedule table.
+
+- Navbar with links to each page.
+- Loading style menu that tracks progress through sign up.
+
+- (Tabs for each training day of the week with info, picture and cost?)
+- Button to sign up for training session that adds it to the schedule table and adds the cost to a variable and stores it (URL parameters or local storage).
+- Next button that takes you to race list.
+
 - Table of races with links to sign up.
+- RAG rating and recommended number of training sessions a week.
+- Option to go back and amend training session choices.
+- Next button that takes you to the schedules
+
 - Schedule of choosen weekly training sessions. 
-- Cancel training session.
+- Button cancel training session and remove it from the list.
 - Total weekly cost of training sessions.
+- Questions? button that takes you to support page.
+
+- Support page with social media links and email enquiry form.
 
 ## Tech Used
 
