@@ -1,4 +1,8 @@
-  body {
-            padding-top: 70px;
-            background-color: yellow;
-        }
+body {
+        padding-top: 70px;
+		background-color: yellow;
+}
+.flexContainer{
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
