@@ -6,3 +6,11 @@ body{
 	flex-flow: row wrap;
 	justify-content: space-around;
 }
+
+/*Home page*/
+
+iframe {
+	width: 400;
+	height: 150;
+	}
+}
