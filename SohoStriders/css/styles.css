@@ -1,6 +1,10 @@
 body{
         padding-top: 70px;
 		background-color: yellow;
+		font-family: 'Raleway', sans-serif;
+}
+p {
+	font-size: 18px;
 }
 .flexContainer{
 	flex-flow: row wrap;
@@ -16,8 +20,9 @@ iframe {
 	height: 150;
 	}
 
-.continuebtn {
-	padding: 100px;
+.fa {
+	padding: 50px;
+	font-size: 150px;
 }
 
 
