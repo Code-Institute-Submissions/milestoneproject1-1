@@ -5,6 +5,8 @@ body{
 .flexContainer{
 	flex-flow: row wrap;
 	justify-content: space-around;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 /*Home page*/
@@ -13,4 +15,9 @@ iframe {
 	width: 400;
 	height: 150;
 	}
+
+.continuebtn {
+	padding: 100px;
 }
+
+
