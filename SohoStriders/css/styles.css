@@ -37,7 +37,10 @@ img{
 /*Support page*/
 
 .fa {
-	padding: 50px;
-	font-size: 150px;
+	padding: 20px;
+	font-size: 100px;
+}
+form {
+	padding: 30px;
 }
 
