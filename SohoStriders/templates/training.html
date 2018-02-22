@@ -1,7 +1,12 @@
 <div class="trainingDays">
 	<h1>When would you like to train?</h1>
+	<ul class="unstyled">
+        <li ng-repeat="day in schedule">
+     {{ day.day }}
+        </li>
+      </ul>
 	<div>
-		<h2>Monday - Hyde and Seek</h2>
+		<h2>{{monday.day}}</h2>
 		<div>
 			<img height="200px" width="300px" src="../images/sniper-ghillie-suit-camo.jpg">
 			<p>Meet at Hyde Park Corner 7:30pm for Hyde and seek. Oh and if it is your first time, you're hiding. When you're found, run away!! Guaranteed to get you running faster than you have ever run before. 
@@ -12,7 +17,7 @@
 	<div>
 		<h2>Tuesday - Down Hill Racing</h2>
 		<img height="200px" width="300px" src="../images/downhillrunning.jpg">
-		<p>Meet at Parliament hill at 6:30pm. Hills are hard. really hard. So why struggle up when you can run down? Research has shown that runnning down hil increases your speed and coordination. Fun speedy session.
+		<p>Meet at Parliament hill at 6:30pm. Hills are hard. really hard. So why struggle up when you can run down? Research has shown that runnning down hill increases your speed and coordination. Fun speedy session.
 		</p>
 		<a class="btn btn-secondary" href="/training">Yes please</a>
 	</div>
