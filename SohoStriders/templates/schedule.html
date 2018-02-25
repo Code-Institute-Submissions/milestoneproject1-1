@@ -1,3 +1,18 @@
-<div>
-	
+<div class="trainingDays">
+	<h1>Your schedule</h1>
+	<div>
+        <table class="table">
+            <thead>
+                <th>Day</th>
+                <th>Session</th>
+                <th>Cost</th>
+            </thead>
+            <tbody ng-repeat="day in schedule">
+                <td>{{day.day}}</td>
+                <td>{{day.session}}</td>
+                <td>{{day.cost}}</td>
+            </tbody>
+      </table>
+    </div>
+     <a href="/support"> <input type="button" value="Continue" ng-click="continue()"> </a>
 </div>
