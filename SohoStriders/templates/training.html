@@ -1,12 +1,15 @@
 <div class="trainingDays">
 	<h1>When would you like to train?</h1>
 	<div>
-	  <ul class="unstyled">
-        <li ng-repeat="day in schedule">
+	  <ul class="trainingList">
+        <li ng-repeat="day in training">
      		<h2>{{ day.day }}</h2>
      		<img height="200px" width="300px" src="../images/{{day.image}}">
      		<p>{{day.description}}</p>
-     		<a class="btn btn-secondary" href="/training">Yes please</a>
+     		<input type="button" value="Yes please" data={{day.index}} ng-click="addToSchedule(day.index)">
         </li>
       </ul>
+    </div>
+     <a href="/racing"> <input type="button" value="Continue" ng-click="continue()"> </a>
+<!--       <a class="btn btn-primary btn-lg btn-block active" href="/racing">Continue</a> -->
 </div>

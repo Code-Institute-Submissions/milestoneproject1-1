@@ -1,4 +1,4 @@
-angular.module('SohoStriders', ['ngRoute', 'RouteControllers']);
+angular.module('SohoStriders', ['ngRoute', 'RouteControllers', 'angular-storage']);
  
 angular.module('SohoStriders').config(function($locationProvider, $routeProvider) {
     $locationProvider.html5Mode(true);  

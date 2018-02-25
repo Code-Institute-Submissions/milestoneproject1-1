@@ -1,20 +1,37 @@
+
+/*innlcude urban alleyway pictures as background with red light?*/
 body{
         padding-top: 70px;
-		background-color: yellow;
-		font-family: 'Raleway', sans-serif;
+		background-color: #0B0C10;
+		font-family: 'Krona One', sans-serif;
+}
+h1{
+	color: #66FCF1;
+	font-style: bold;
+}
+h2 {
+	color: #45A29E;
 }
 p {
 	font-size: 18px;
 	padding: 10px;
+	color: #C5C6C7;
 }
-.btn{
+.btn-primary {
 	font-size: 18px;
+	background-color: #66FCF1;
 }
 .flexContainer{
 	flex-flow: row wrap;
 	justify-content: space-around;
 	padding-left: 30px;
 	padding-right: 30px;
+}
+
+/*Nav bar*/
+
+.navbar {
+	background-color: #1F2833;
 }
 
 /*Home page*/
@@ -25,6 +42,11 @@ iframe {
 	}
 
 /*Training*/
+
+.trainingList {
+	list-style-type: none;
+	padding: 0px;
+}
 
 .trainingDays > div {
 	padding: 20px;
