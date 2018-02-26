@@ -6,7 +6,9 @@
      		<h2>{{ day.day }}</h2>
      		<img height="200px" width="300px" src="../images/{{day.image}}">
      		<p>{{day.description}}</p>
+       <!--  <input type="button" value="Yes please" data={{day.index}} ng-click={showOtherButton}> -->
      		<input type="button" value="Yes please" data={{day.index}} ng-click="addToSchedule(day.index)">
+        <input type="button" value="No ta" data={{day.index}} ng-click="removeFromSchedule(day.index)">
         </li>
       </ul>
     </div>

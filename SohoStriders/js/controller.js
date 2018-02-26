@@ -60,6 +60,17 @@ angular.module('RouteControllers', [])
 
     	$scope.addToSchedule = function(idPassedIn) {
     		schedule.push(training[idPassedIn]);
+    		console.log(schedule);
+    		//need to order by in the array
+
+    		//Add removefromschedule to replace addToSchedule 
+    	};
+
+    	$scope.removeFromSchedule = function(idPassedIn){
+
+    		//match the day name with the property and take off that index
+    		schedule.splice(idPassedIn, 1);
+    		console.log(schedule);
     	};
 
     	$scope.continue = function() {
@@ -74,7 +85,4 @@ angular.module('RouteControllers', [])
     })
     .controller('ScheduleController', function($scope, store){
     	$scope.schedule = store.get('obj');
-
-    	console.log(schedule)
-
     })
