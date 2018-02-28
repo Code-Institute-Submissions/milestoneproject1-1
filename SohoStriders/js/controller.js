@@ -48,7 +48,58 @@ var training = [{day: "Monday",
 				 description: "4 pints, 1 mile, please drink responsibly.",
 				}];
 
-var schedule = [];
+
+var schedule = [{day: "Monday", 
+				 index: 0,
+				 session: "Rest",
+				 cost:"Free",
+				},
+				{day: "Tuesday",
+				 index: 1,
+				 session: "Rest",
+				 cost:"Free",				
+				},
+				 {day: "Wednesday",
+				 index: 2,
+				 session: "Rest",
+				 cost:"Free",
+				},
+				{day: "Thursday",
+				 index: 3,
+				 session: "Rest",
+				 cost:"Free",				 
+				},
+				{day: "Friday",
+				 index: 4,
+				 session: "Rest",
+				 cost:"Free",
+				 }];
+
+const restSchedule = [{day: "Monday", 
+				 index: 0,
+				 session: "Rest",
+				 cost:"Free",
+				},
+				{day: "Tuesday",
+				 index: 1,
+				 session: "Rest",
+				 cost:"Free",				
+				},
+				 {day: "Wednesday",
+				 index: 2,
+				 session: "Rest",
+				 cost:"Free",
+				},
+				{day: "Thursday",
+				 index: 3,
+				 session: "Rest",
+				 cost:"Free",				 
+				},
+				{day: "Friday",
+				 index: 4,
+				 session: "Rest",
+				 cost:"Free",
+				 }];
 
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
@@ -59,7 +110,7 @@ angular.module('RouteControllers', [])
     	$scope.training = training;
 
     	$scope.addToSchedule = function(idPassedIn) {
-    		schedule.push(training[idPassedIn]);
+    		schedule.splice(idPassedIn,1,training[idPassedIn]);
     		console.log(schedule);
     		//need to order by in the array
 
@@ -69,7 +120,7 @@ angular.module('RouteControllers', [])
     	$scope.removeFromSchedule = function(idPassedIn){
 
     		//match the day name with the property and take off that index
-    		schedule.splice(idPassedIn, 1);
+    		schedule.splice(idPassedIn, 1,restSchedule[idPassedIn]);
     		console.log(schedule);
     	};
 

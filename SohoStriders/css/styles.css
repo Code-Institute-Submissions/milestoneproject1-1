@@ -7,8 +7,38 @@ body{
         padding-top: 70px;
 		background-color: #0B0C10;
 		font-family: 'Krona One', sans-serif;
-		/*background-image: url('../images/background_alley.jpg');
-*/
+
+
+}
+/*.home{
+		background-image: url('../images/home.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.training {
+		background-image: url('../images/training.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.racing {
+		background-image: url('../images/racing.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.schedule{
+		background-image: url('../images/schedule.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.support{
+		background-image: url('../images/support.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;*/
 }
 h1{
 	color: #66FCF1;
