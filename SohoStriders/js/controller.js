@@ -76,30 +76,32 @@ var schedule = [{day: "Monday",
 				 }];
 
 const restSchedule = [{day: "Monday", 
-				 index: 0,
-				 session: "Rest",
-				 cost:"Free",
-				},
-				{day: "Tuesday",
-				 index: 1,
-				 session: "Rest",
-				 cost:"Free",				
-				},
-				 {day: "Wednesday",
-				 index: 2,
-				 session: "Rest",
-				 cost:"Free",
-				},
-				{day: "Thursday",
-				 index: 3,
-				 session: "Rest",
-				 cost:"Free",				 
-				},
-				{day: "Friday",
-				 index: 4,
-				 session: "Rest",
-				 cost:"Free",
-				 }];
+					 index: 0,
+					 session: "Rest",
+					 cost:"Free",
+					},
+					{day: "Tuesday",
+					 index: 1,
+					 session: "Rest",
+					 cost:"Free",				
+					},
+					 {day: "Wednesday",
+					 index: 2,
+					 session: "Rest",
+					 cost:"Free",
+					},
+					{day: "Thursday",
+					 index: 3,
+					 session: "Rest",
+					 cost:"Free",				 
+					},
+					{day: "Friday",
+					 index: 4,
+					 session: "Rest",
+					 cost:"Free",
+					 }];
+
+var cost = 0
 
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
@@ -110,26 +112,22 @@ angular.module('RouteControllers', [])
     	$scope.training = training;
 
     	$scope.addToSchedule = function(idPassedIn) {
+    		//Add clicked session to schedule, replacing rest day object
     		schedule.splice(idPassedIn,1,training[idPassedIn]);
     		console.log(schedule);
-    		//need to order by in the array
-
-    		//Add removefromschedule to replace addToSchedule 
+    		$scope.selected = true;
     	};
 
     	$scope.removeFromSchedule = function(idPassedIn){
-
-    		//match the day name with the property and take off that index
+    		//Replace clicked training day in schedule with rest day object
     		schedule.splice(idPassedIn, 1,restSchedule[idPassedIn]);
     		console.log(schedule);
+    		$scope.selected = false;
     	};
-
+    	//Add schedule to local storage
     	$scope.continue = function() {
     		store.set ('obj', schedule);
     	};
-
-    	
-
     })
     .controller('RacingController', function($scope){
 

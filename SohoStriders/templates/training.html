@@ -6,12 +6,10 @@
      		<h2>{{ day.day }}</h2>
      		<img height="200px" width="300px" src="../images/{{day.image}}">
      		<p>{{day.description}}</p>
-       <!--  <input type="button" value="Yes please" data={{day.index}} ng-click={showOtherButton}> -->
-     		<input type="button" value="Yes please" data={{day.index}} ng-click="addToSchedule(day.index)">
-        <input type="button" value="No ta" data={{day.index}} ng-click="removeFromSchedule(day.index)">
+     		<button ng-model="selected" data={{day.index}} ng-click="addToSchedule(day.index)" ng-disabled="selected">Yes please</button>
+            <button ng-class="selected" data={{day.index}} ng-click="removeFromSchedule(day.index)" ng-disabled="!selected">No ta</button>
         </li>
       </ul>
     </div>
-     <a href="/racing"> <input type="button" value="Continue" ng-click="continue()"> </a>
-<!--       <a class="btn btn-primary btn-lg btn-block active" href="/racing">Continue</a> -->
+     <a href="/racing"> <button ng-click="continue()">Continue</button></a>
 </div>
