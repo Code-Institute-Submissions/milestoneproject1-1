@@ -6,8 +6,13 @@
      		<h2>{{ day.day }}</h2>
      		<img height="200px" width="300px" src="../images/{{day.image}}">
      		<p>{{day.description}}</p>
+
+             <button data={{day.index}} ng-click="addToSchedule(day.index)" ng-show="visible">Yes please</button>
+            <button data={{day.index}} ng-click="removeFromSchedule(day.index)" ng-show="!visible">No ta</button>
+
+<!-- 
      		<button data={{day.index}} ng-click="addToSchedule(day.index)">Yes please</button>
-            <button ng-class="selected" data={{day.index}} ng-click="removeFromSchedule(day.index)">No ta</button>
+            <button ng-class="selected" data={{day.index}} ng-click="removeFromSchedule(day.index)">No ta</button> -->
         </li>
       </ul>
     </div>
@@ -15,5 +20,5 @@
 </div>
 
 
-<!-- <button ng-model="selected" data={{day.index}} ng-click="addToSchedule(day.index)" ng-disabled="selected">Yes please</button>
+<!-- <button ng-model="selected" data={{day.index}} ng-click="addToSchedule(day.index)" ng-disabled="day.selected">Yes please</button>
             <button ng-class="selected" data={{day.index}} ng-click="removeFromSchedule(day.index)" ng-disabled="!selected">No ta</button> -->

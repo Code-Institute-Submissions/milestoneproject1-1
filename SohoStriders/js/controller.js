@@ -102,6 +102,7 @@ const restSchedule = [{day: "Monday",
 					 }];
 
 var cost = 0
+disable = false
 
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
@@ -110,19 +111,21 @@ angular.module('RouteControllers', [])
     .controller('TrainingController', function($scope, store) {
 
     	$scope.training = training;
+    	$scope.cost = cost
+    	$scope.visible = true;
 
     	$scope.addToSchedule = function(idPassedIn) {
     		//Add clicked session to schedule, replacing rest day object
     		schedule.splice(idPassedIn,1,training[idPassedIn]);
-    		console.log(schedule);
-    		$scope.selected = true;
+    		//switch button to no for specific training day
+    		this.visible = !this.visible;
     	};
 
     	$scope.removeFromSchedule = function(idPassedIn){
     		//Replace clicked training day in schedule with rest day object
     		schedule.splice(idPassedIn, 1,restSchedule[idPassedIn]);
-    		console.log(schedule);
-    		$scope.selected = false;
+    		//switch button to yes for specific training day
+    		this.visible = !this.visible;
     	};
     	//Add schedule to local storage
     	$scope.continue = function() {
