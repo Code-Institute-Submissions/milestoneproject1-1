@@ -1,5 +1,5 @@
 var training = [{day: "Monday", 
-				 index: 0,
+				 activityId: 0,
 				 session: "Hyde and Seek",
 				 location: "Hyde Park",
 				 time: "1900",
@@ -9,7 +9,7 @@ var training = [{day: "Monday",
 				},
 
 				{day: "Tuesday",
-				 index: 1,
+				 activityId: 1,
 				 session: "Down hill racing",
 				 location: "Hyde Park",
 				 time: "1930",
@@ -19,7 +19,7 @@ var training = [{day: "Monday",
 				},
 
 				 {day: "Wednesday",
-				 index: 2,
+				 activityId: 2,
 				 session: "Race the tube",
 				 location: "TBD",
 				 time: "1930",
@@ -29,7 +29,7 @@ var training = [{day: "Monday",
 				},
 
 				{day: "Thursday",
-				 index: 3,
+				 activityId: 3,
 				 session: "Capture the flag",
 				 location: "Hyde Park",
 				 time: "2000",
@@ -39,7 +39,7 @@ var training = [{day: "Monday",
 				},
 
 				{day: "Friday",
-				 index: 4,
+				 activityId: 4,
 				 session: "John Snow Mile",
 				 location: "John Snow Pub",
 				 time: "1930",
@@ -49,60 +49,69 @@ var training = [{day: "Monday",
 				}];
 
 
-var schedule = [{day: "Monday", 
-				 index: 0,
-				 session: "Rest",
-				 cost:"Free",
-				},
-				{day: "Tuesday",
-				 index: 1,
-				 session: "Rest",
-				 cost:"Free",				
-				},
-				 {day: "Wednesday",
-				 index: 2,
-				 session: "Rest",
-				 cost:"Free",
-				},
-				{day: "Thursday",
-				 index: 3,
-				 session: "Rest",
-				 cost:"Free",				 
-				},
-				{day: "Friday",
-				 index: 4,
-				 session: "Rest",
-				 cost:"Free",
-				 }];
-
-const restSchedule = [{day: "Monday", 
-					 index: 0,
-					 session: "Rest",
-					 cost:"Free",
-					},
-					{day: "Tuesday",
-					 index: 1,
-					 session: "Rest",
-					 cost:"Free",				
-					},
-					 {day: "Wednesday",
-					 index: 2,
-					 session: "Rest",
-					 cost:"Free",
-					},
-					{day: "Thursday",
-					 index: 3,
-					 session: "Rest",
-					 cost:"Free",				 
-					},
-					{day: "Friday",
-					 index: 4,
-					 session: "Rest",
-					 cost:"Free",
-					 }];
+// const restSchedule = [{day: "Monday", 
+// 					 activityId: 0,
+// 					 session: "Rest",
+// 					 cost: 0,
+// 					},
+// 					{day: "Tuesday",
+// 					 activityId: 1,
+// 					 session: "Rest",
+// 					 cost: 0,				
+// 					},
+// 					 {day: "Wednesday",
+// 					 activityId: 2,
+// 					 session: "Rest",
+// 					 cost: 0,
+// 					},
+// 					{day: "Thursday",
+// 					 activityId: 3,
+// 					 session: "Rest",
+// 					 cost: 0,				 
+// 					},
+// 					{day: "Friday",
+// 					 activityId: 4,
+// 					 session: "Rest",
+// 					 cost: 0,
+// 					 }];
 
 var cost = 0
-disable = false
+
+
+function toggleActivity(selectedActivities,activityId){
+	var result ;
+	var indexOfActivity = selectedActivities.indexOf(activityId);
+	if (indexOfActivity > -1) {
+		//Don't operate on function arguments
+		var copy = selectedActivities.slice()
+		copy.splice(activityId, 1)
+		result = copy;
+	} else {
+		result = selectedActivities.concat([activityId]); 
+	}
+	return result;
+};
+
+
+
+
+
+
+function scheduleCreator(selectedActivities,training){
+	var filteredTraining = training.filter(function(day){
+		return isActivitySelected(day.activityId, selectedActivities)
+		// return selectedActivities.indexOf(day.activityId) > -1;
+	})
+	return filteredTraining;
+}
+
+function isActivitySelected(activityId, selectedActivities){
+	return selectedActivities.indexOf(activityId) > -1
+}
+
+
+
+
 
 angular.module('RouteControllers', [])
     .controller('HomeController', function($scope) {
@@ -113,23 +122,43 @@ angular.module('RouteControllers', [])
     	$scope.training = training;
     	$scope.cost = cost
     	$scope.visible = true;
+    	$scope.schedule = [];
 
-    	$scope.addToSchedule = function(idPassedIn) {
-    		//Add clicked session to schedule, replacing rest day object
-    		schedule.splice(idPassedIn,1,training[idPassedIn]);
-    		//switch button to no for specific training day
-    		this.visible = !this.visible;
-    	};
+    	//one function a click handler that takes in ID, checks array for existence of ID, if there remove, if not add
+    	$scope.onActivityClick = function(day){
+    		// console.log($scope.schedule, day)
+    		$scope.schedule = toggleActivity($scope.schedule, day.activityId)
+    		// console.log($scope.schedule, day)
+    	}  
 
-    	$scope.removeFromSchedule = function(idPassedIn){
-    		//Replace clicked training day in schedule with rest day object
-    		schedule.splice(idPassedIn, 1,restSchedule[idPassedIn]);
-    		//switch button to yes for specific training day
-    		this.visible = !this.visible;
-    	};
+    	$scope.isActivitySelected = function(activityId){
+
+    		return isActivitySelected(activityId, $scope.schedule);
+
+    		}
+
+
+    	//separation of concerns - component that wants to display just needs list of ids
+    	//make fucntion that does taht logic
+    	// $scope.addToSchedule = function(idPassedIn) {
+
+    	// 	//Add clicked session to schedule, replacing rest day object
+    	// 	schedule.splice(idPassedIn,1,training[idPassedIn]);
+    	// 	//switch button to no for specific training day
+    	// 	this.visible = !this.visible;
+    	// };
+
+    	// $scope.removeFromSchedule = function(idPassedIn){
+    	// 	//Replace clicked training day in schedule with rest day object
+    	// 	schedule.splice(idPassedIn, 1,restSchedule[idPassedIn]);
+    	// 	//switch button to yes for specific training day
+    	// 	this.visible = !this.visible;
+    	// };
     	//Add schedule to local storage
     	$scope.continue = function() {
-    		store.set ('obj', schedule);
+    		$scope.schedule = scheduleCreator($scope.schedule, training);
+    		store.set ('obj', $scope.schedule);
+    		console.log($scope.schedule)
     	};
     })
     .controller('RacingController', function($scope){
@@ -137,4 +166,11 @@ angular.module('RouteControllers', [])
     })
     .controller('ScheduleController', function($scope, store){
     	$scope.schedule = store.get('obj');
+
+
     })
+
+
+
+
+
