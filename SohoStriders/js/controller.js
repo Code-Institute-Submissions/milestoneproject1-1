@@ -49,68 +49,38 @@ var training = [{day: "Monday",
 				}];
 
 
-// const restSchedule = [{day: "Monday", 
-// 					 activityId: 0,
-// 					 session: "Rest",
-// 					 cost: 0,
-// 					},
-// 					{day: "Tuesday",
-// 					 activityId: 1,
-// 					 session: "Rest",
-// 					 cost: 0,				
-// 					},
-// 					 {day: "Wednesday",
-// 					 activityId: 2,
-// 					 session: "Rest",
-// 					 cost: 0,
-// 					},
-// 					{day: "Thursday",
-// 					 activityId: 3,
-// 					 session: "Rest",
-// 					 cost: 0,				 
-// 					},
-// 					{day: "Friday",
-// 					 activityId: 4,
-// 					 session: "Rest",
-// 					 cost: 0,
-// 					 }];
-
-var cost = 0
-
-
+//function to add and remove the acitivty from the schedule when the button is clicked
 function toggleActivity(selectedActivities,activityId){
+	//create result variable for resultant array
 	var result ;
+	//Add index of clicked day to variable 
 	var indexOfActivity = selectedActivities.indexOf(activityId);
+	// If it is not -1 (can be found) then remove it
 	if (indexOfActivity > -1) {
 		//Don't operate on function arguments
 		var copy = selectedActivities.slice()
 		copy.splice(activityId, 1)
 		result = copy;
 	} else {
+		//Otherwise if it is -1 and can be found then add it to the selectedActivities array
 		result = selectedActivities.concat([activityId]); 
 	}
+	//return the array
 	return result;
 };
 
-
-
-
-
-
+//Function to print out array of training day objects from the array of activity ids
 function scheduleCreator(selectedActivities,training){
 	var filteredTraining = training.filter(function(day){
 		return isActivitySelected(day.activityId, selectedActivities)
-		// return selectedActivities.indexOf(day.activityId) > -1;
-	})
+	});
 	return filteredTraining;
-}
+};
 
+//function to determine if the activity day is in the schedule array or not
 function isActivitySelected(activityId, selectedActivities){
 	return selectedActivities.indexOf(activityId) > -1
-}
-
-
-
+};
 
 
 angular.module('RouteControllers', [])
@@ -126,34 +96,15 @@ angular.module('RouteControllers', [])
 
     	//one function a click handler that takes in ID, checks array for existence of ID, if there remove, if not add
     	$scope.onActivityClick = function(day){
-    		// console.log($scope.schedule, day)
+    		// make the scope.schedule the result array from the toggle function
     		$scope.schedule = toggleActivity($scope.schedule, day.activityId)
-    		// console.log($scope.schedule, day)
     	}  
-
+    	//Test if the activity is in the array and decide which button to show
     	$scope.isActivitySelected = function(activityId){
 
     		return isActivitySelected(activityId, $scope.schedule);
 
     		}
-
-
-    	//separation of concerns - component that wants to display just needs list of ids
-    	//make fucntion that does taht logic
-    	// $scope.addToSchedule = function(idPassedIn) {
-
-    	// 	//Add clicked session to schedule, replacing rest day object
-    	// 	schedule.splice(idPassedIn,1,training[idPassedIn]);
-    	// 	//switch button to no for specific training day
-    	// 	this.visible = !this.visible;
-    	// };
-
-    	// $scope.removeFromSchedule = function(idPassedIn){
-    	// 	//Replace clicked training day in schedule with rest day object
-    	// 	schedule.splice(idPassedIn, 1,restSchedule[idPassedIn]);
-    	// 	//switch button to yes for specific training day
-    	// 	this.visible = !this.visible;
-    	// };
     	//Add schedule to local storage
     	$scope.continue = function() {
     		$scope.schedule = scheduleCreator($scope.schedule, training);

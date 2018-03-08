@@ -63,6 +63,8 @@ The site allows users to learn about the club and the training sessions, sign up
 - Questions? button that takes you to support page.
 
 - Support page with social media links and email enquiry form.
+- Button cancel training session and remove it from the list.
+
 
 ### Features Left to Implement
 
@@ -74,9 +76,8 @@ The site allows users to learn about the club and the training sessions, sign up
 
 - RAG rating and recommended number of training sessions a week.
 - Option to go back and amend training session choices.
- 
-- Button cancel training session and remove it from the list.
 - Total weekly cost of training sessions.
+
 
 
 
