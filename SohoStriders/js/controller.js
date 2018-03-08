@@ -69,7 +69,7 @@ function toggleActivity(selectedActivities,activityId){
 	return result;
 };
 
-//Function to print out array of training day objects from the array of activity ids
+//Function to print out array of training day objects from the array
 function scheduleCreator(selectedActivities,training){
 	var filteredTraining = training.filter(function(day){
 		return isActivitySelected(day.activityId, selectedActivities)
@@ -90,7 +90,6 @@ angular.module('RouteControllers', [])
     .controller('TrainingController', function($scope, store) {
 
     	$scope.training = training;
-    	$scope.cost = cost
     	$scope.visible = true;
     	$scope.schedule = [];
 
@@ -120,6 +119,7 @@ angular.module('RouteControllers', [])
 
 
     })
+
 
 
 
