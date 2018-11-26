@@ -1,0 +1,103 @@
+
+/*innlcude urban alleyway pictures as background with red light?*/
+/*https://pixabay.com/en/businessman-heels-isolated-jumping-3138729/*/
+/*https://pixabay.com/en/design-jumping-running-men-3144710/*/
+/* bowler hat logo with red light */
+body{
+        padding-top: 70px;
+		background-color: white;
+		font-family: 'Krona One', sans-serif;
+
+
+}
+/*.home{
+		background-image: url('../images/home.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.training {
+		background-image: url('../images/training.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.racing {
+		background-image: url('../images/racing.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.schedule{
+		background-image: url('../images/schedule.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;
+}
+.support{
+		background-image: url('../images/support.jpg');
+		background-repeat: no-repeat;
+    	background-attachment: fixed;
+    	background-position: center top;*/
+}
+h1{
+	color: #66FCF1;
+	font-style: bold;
+}
+h2 {
+	color: #45A29E;
+}
+p {
+	font-size: 18px;
+	padding: 10px;
+	color: #C5C6C7;
+}
+.btn-primary {
+	font-size: 18px;
+	background-color: #66FCF1;
+}
+.flexContainer{
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/*Nav bar*/
+
+.navbar {
+	background-color: #1F2833;
+}
+
+/*Home page*/
+
+iframe {
+	width: 400;
+	height: 150;
+	}
+
+/*Training*/
+
+.trainingList {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.trainingDays > div {
+	padding: 20px;
+}
+
+img{
+	padding: 10px;
+}
+
+/*Support page*/
+
+.fa {
+	padding: 20px;
+	font-size: 100px;
+}
+form {
+	padding: 30px;
+}
+

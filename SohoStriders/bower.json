@@ -1,0 +1,23 @@
+{
+  "name": "milestoneprojects",
+  "description": "## Overview",
+  "main": "index.js",
+  "authors": [
+    "harryphelps <harry.phelps@octoenergy.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/harryphelps2/milestoneproject1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "a0-angular-storage": "^0.0.15"
+  }
+}
