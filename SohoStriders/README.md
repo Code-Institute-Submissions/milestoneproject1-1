@@ -98,8 +98,11 @@ The site allows users to learn about the club and the training sessions, sign up
 ## Contributing
  
 ### Getting the code up and running
+<<<<<<< HEAD
 
 Need to redo this on virtual env and set up remote server again
+=======
+>>>>>>> f9f31d0cb15e5a9559ef15a60c389e24a297fed3
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
 2. After you've that you'll need to make sure that you have **npm** and **bower** installed
   1. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
@@ -115,5 +118,8 @@ Need to redo this on virtual env and set up remote server again
 5. Once **http-server** is installed run ```http-server -c-1```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
 7. Make changes to the code and if you think it belongs in here then just submit a pull request
+<<<<<<< HEAD
 
 We are missing the bower components and the node modules which are on the other laptop cos of git ignore
+=======
+>>>>>>> f9f31d0cb15e5a9559ef15a60c389e24a297fed3
