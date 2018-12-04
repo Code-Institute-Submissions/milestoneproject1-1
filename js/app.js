@@ -7,19 +7,19 @@ angular.module('SohoStriders').config(function($locationProvider, $routeProvider
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
     })
-    .when('/training', {
+    .when('milestoneproject1/training', {
         templateUrl: 'templates/training.html',
         controller: 'TrainingController'
     })
-    .when('/racing', {
+    .when('milestoneproject1/racing', {
         templateUrl: 'templates/racing.html',
         controller: 'RacingController'
     })
-    .when('/schedule', {
+    .when('milestoneproject1/schedule', {
     	templateUrl: 'templates/schedule.html',
 	controller: 'ScheduleController'
     })
-    .when('/support', {
+    .when('milestoneproject1/support', {
         templateUrl: 'templates/support.html',
         controller: 'SupportController'
     });
