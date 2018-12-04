@@ -1,5 +1,7 @@
 # Milestone Project1 - Running Club Soho Striders
 
+Live site: https://harryphelps2.github.io/milestoneproject1/
+
 ## Overview
 
 ### What is the app for?
