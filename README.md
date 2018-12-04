@@ -133,7 +133,6 @@ https://github.com/harryphelps2/milestoneproject1/blob/master/javascript_testing
  
 ### Getting the code up and running
 
-Need to redo this on virtual env and set up remote server again
 1. Firstly you will need to clone this repository by running the ```git clone <project's Github URL>``` command
 2. After you've that you'll need to make sure that you have **npm** and **bower** installed
   1. You can get **npm** by installing Node from [here](https://nodejs.org/en/)
