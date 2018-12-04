@@ -4,7 +4,7 @@
 	  <ul class="trainingList">
         <li ng-repeat="day in training">
      		<h2>{{ day.day }}</h2>
-     		<img height="200px" width="300px" src="../images/{{day.image}}">
+     		<img height="200px" width="300px" src="/milestoneproject1/images/{{day.image}}">
      		<p>{{day.description}}</p>
              <button data={{day.index}} ng-click="onActivityClick(day)">
                 <span ng-show="isActivitySelected(day.activityId)" >No ta</span>
@@ -13,5 +13,5 @@
         </li>
       </ul>
     </div>
-     <a href="/racing"> <button ng-click="continue()">Continue</button></a>
+     <a href="/milestoneproject1/racing"> <button ng-click="continue()">Continue</button></a>
 </div>
