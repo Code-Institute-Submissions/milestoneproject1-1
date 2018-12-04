@@ -38,7 +38,50 @@ Carl was born in Norwich and now works for a bank in the city. He is extremely c
 
 ### What does it do?
 
-The site allows users to learn about the club and the training sessions, sign up for training sessions and upcoming races and tells them how much it will cost.  
+The site allows users to learn about the club and the training sessions, sign up for training sessions and upcoming races and tells them how much it will cost. 
+
+#User Experience Notes
+
+## Strategy
+
+- Goals
+	- Keep fit
+	- Get faster
+	- Make friends
+	- Get out of the house
+
+- User Constituencies
+	- Members
+	- Non-members
+	- Staff
+
+- Usage contexts
+	- Track
+	- Road
+	- Forest
+
+## Scope
+- User tasks
+	- Join
+	- Leave
+	- Sign up for races
+	- Buy kit
+	- Find out about training times
+	- Find out about social events
+
+## Structure
+ 	### Home
+		
+	### Training
+
+	### Racing
+
+	### Social
+
+## Skeleton and Surface
+
+See Mockups for designs:
+https://github.com/harryphelps2/milestoneproject1/tree/master/Mockups
 
 ## Features
 

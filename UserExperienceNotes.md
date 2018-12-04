@@ -36,6 +36,7 @@
 
 	### Social
 
-## Skeleton
+## Skeleton and Surface
 
-## Surface
+See Mockups for designs:
+https://github.com/harryphelps2/milestoneproject1/tree/master/Mockups
