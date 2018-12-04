@@ -4,7 +4,7 @@
 
 ### What is the app for?
 
-This app is for members of the running club to find information on training and sign up for sessions and races.
+This app is for members of the running club to find information on training and sign up for training sessions and races.
 
 #### Persona 1 Mia
 
@@ -26,7 +26,6 @@ Mia is moved to London from the West Country. She is looking to join a local soc
 Carl was born in Norwich and now works for a bank in the city. He is extremely competitive and ran to county level as a child. He is single and his social life revolve around traing and racing with the club, and going to the gym. He competes for the club at meets and likes to keep track of his times and where he places. Carl is cash rich but time-poor. He has only limited time to didicate to training so he needs to know that the sessions he does attend will bring him maximum speed benefit.
 
 - Goals
-	- Keep track of race times, and position in the club
 	- Browse races
 	- Sign up for races
 	- Plan training
@@ -34,26 +33,22 @@ Carl was born in Norwich and now works for a bank in the city. He is extremely c
 - Tasks
 	- Browse races
 	- Browse training sessions
-	- Add races to cart
-	- Pay for races	
+	- Opt in to training sessions and build weekly training schedule
+	- Seek support from Club admin if required.
 
 ### What does it do?
 
 The site allows users to learn about the club and the training sessions, sign up for training sessions and upcoming races and tells them how much it will cost.  
 
-### How does it work?
-
 ## Features
 
-
-
-### Existing Features
 - Home landing page with about us and video.
-- Join us button that takes you to the training page.
-
 - Navbar with links to each page.
 
-- Button to sign up for training session that adds it to the schedule table and adds the cost to a variable and stores it (URL parameters or local storage).
+- Join us button that takes you to the training page.
+
+- Button to sign up for training session that adds it to the schedule table and adds the cost to a variable and stores it in local storage.
+
 - Next button that takes you to race list.
 
 - Table of races with links to sign up.
@@ -65,25 +60,21 @@ The site allows users to learn about the club and the training sessions, sign up
 - Support page with social media links and email enquiry form.
 - Button cancel training session and remove it from the list.
 
+### Testing
 
-### Features Left to Implement
+There is a testing suite to:
 
-- Video styling that turns background black when they click play and then enlargens Join button.
+1. test the toggle add and remove a training session from the selectedActivities array in local storage.
 
-- Loading style menu that tracks progress through sign up.
+2. test the creation of a personalised schedule from the index-array
 
-- (Tabs for each training day of the week with info, picture and cost?)
+Testing can be found here:
 
-- RAG rating and recommended number of training sessions a week.
-- Option to go back and amend training session choices.
-- Total weekly cost of training sessions.
-
-
+https://github.com/harryphelps2/milestoneproject1/blob/master/javascript_testing/spec/scheduleSpec.js
 
 
 ## Tech Used
 
-### Some the tech used includes:
 - [AngularJS](https://angularjs.org/)
     - We use **AngularJS** to handle page routing, we also use it to make calls to the REST API and build custom directives
 - [Bootstrap](http://getbootstrap.com/)
@@ -92,8 +83,6 @@ The site allows users to learn about the club and the training sessions, sign up
     - We use **npm** to help manage some of the dependencies in our application
 - [bower](https://bower.io/)
     - **Bower** is used to manage the installation of our libraries and frameworks
-
-## Contributing
 
 ## Contributing
  
@@ -115,5 +104,3 @@ Need to redo this on virtual env and set up remote server again
 5. Once **http-server** is installed run ```http-server -c-1```
 6. The project will now run on [localhost](http://127.0.0.1:8080)
 7. Make changes to the code and if you think it belongs in here then just submit a pull request
-
-We are missing the bower components and the node modules which are on the other laptop cos of git ignore
